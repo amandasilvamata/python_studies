@@ -1,27 +1,26 @@
 #  programa para adivinhar as musicas da lana del rey
 
-print('************LANA *******************')
+print('🍒❤️‍🔥 LANA ❤️‍🔥🍒')
 
-song = ""
 pontos = 0
 
-while song != 'ride' and song != 'Ride':
-    song = input('Qual música da Lana contém essa frase? \n"I hear the birds on the summer breeze, I drive fast \n I am alone at midnight"? ')
-    if song != 'ride' and song != 'Ride':
-        print('você errou :( tente novamente para passar para próxima fase)')
-        print(pontos)
-    else:
-        print('Diva! você acertou! Mais um ponto!')
-        pontos += 1
-        print(pontos)
+musicas = [
+    ('I hear the birds on the summer breeze, I drive fast \nI am alone at midnight', 'ride'),
+    ('It isn\'t that hard, boy, to like you or love you? \nI\'d follow you down, down, down \nYou\'re unbelievable"?', 'million dollar man'),
+    ('He used to call me poison \nLike I was poison ivy', 'ultraviolence'),
+    ('Summer\'s meant for lovin\' and leavin\' \nI was such a fool for believin\' that you \nCould change all the ways you\'ve been livin\' \nBut you just couldn\'t stop', 'white mustang')
+]
 
-while song != 'million dollar man' and song != 'Million Dollar Man':
-    song = input('Qual música da Lana contém essa frase?\n"It isn\'t that hard, boy, to like you or love you? \nI\'d follow you down, down, down \nYou\'re unbelievable"? ')
-    if song != 'million dollar man' and song != 'Million Dollar Man':
-        print('você errou :( tente novamente para passar para próxima fase)')
-        print(pontos)
-    else:
-        print('Diva! você acertou! Mais um ponto!')
-        pontos += 1
-        print(pontos)
+for frase, resposta_correta in musicas:
+    song =''
 
+    while song.lower() != resposta_correta:
+        song = input(f'Qual música da Lana contém essa frase?\n"{frase}"\n')
+
+        if song.lower() != resposta_correta:
+            print('você errou :( tente novamente para passar para a próxima fase 🥺)')
+            print(pontos)
+        else:
+            print('diva! você acertou! mais um ponto para você🌹')
+            pontos += 1
+            print(pontos)
