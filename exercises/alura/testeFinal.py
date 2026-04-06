@@ -30,3 +30,23 @@ for _ in range(5):
 print(sorteados)
 
 print(sorteados[::-1])
+
+# exercicio 5
+
+numero = int(input('Digite um número: '))
+
+primos = []
+
+for i in range(2, numero + 1):
+    primo = True
+
+    for j in range(2, i):
+        if i % j == 0:
+            primo = False
+
+    if primo:
+        primos.append(i)
+
+print(primos)
+
+
